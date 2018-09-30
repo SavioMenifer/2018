@@ -1,1 +1,49 @@
-Hello World
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Savio Menifer - Portfolio</title>
+	<meta name="author" content="Savio Menifer" />
+	<meta name="description" content="Personal portfolio webiste" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1>I'm Savio Menifer</h1>
+		<p>blah blah blah</p>
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1>More Simple yet</h1>
+			<p>Sections won't contain anchor links. It's more simple to configure but a bit more restrictive.</p>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>URL without /#</h1>
+			<p>But back button won't work!</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+    });
+</script>
+
+</body>
+</html>
