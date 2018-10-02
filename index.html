@@ -6,27 +6,107 @@
 	<meta name="author" content="Savio Menifer" />
 	<meta name="description" content="Personal portfolio webiste" />
 	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:500" rel="stylesheet" />
+	<script src="js/modernizr.js"></script>
 </head>
 
 <body>
+	
+<main>
+<div class="cd-index cd-main-content">
+	<nav id="cd-vertical-nav">
+		<ul>
+			<li>
+				<a href="#section1" data-number="1">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Intro</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section2" data-number="2">
+					<span class="cd-dot"></span>
+					<span class="cd-label">About</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section3" data-number="3">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Posters</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section4" data-number="4">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Logos</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section5" data-number="5">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Print Design</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section6" data-number="6">
+					<span class="cd-dot"></span>
+					<span class="cd-label">UX Design</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section7" data-number="7">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Contact</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
-<!-- <div class="support-scrollsnap"></div> -->
-
-<div class="scroll-container">
-	<div class="scroll-area">1</div>
-	<div class="scroll-area">2</div>
-	<div class="scroll-area">3</div>
-	<div class="scroll-area">4</div>
+	<section id="section1" class="cd-section">
+		<div class="cd-section-text">
+			<h1>Hi! I'm Savio Menifer.</h1>
+		</div>
+	</section>
+	<section id="section2" class="cd-section">
+		<div class="cd-section-text">
+			<h1>I'm a designer.</h1>
+		</div>
+	</section>
+	<section id="section3" class="cd-section">
+		<div class="cd-section-text">
+			<h1>I make <a class="section-link" href="logos.html">posters.</a></h1>
+		</div>
+	</section>
+	<section id="section4" class="cd-section">
+		<div class="cd-section-text">
+			<h1>I also make <a class="section-link" href="logos.html">logos.</a></h1>
+		</div>
+	</section>
+	<section id="section5" class="cd-section">
+		<div class="cd-section-text">
+			<h1>I even dabble in print design.</h1>
+		</div>
+	</section>
+	<section id="section6" class="cd-section">
+		<div class="cd-section-text">
+			<h1>But my heart lies in UX Design.</h1>
+		</div>
+	</section>
+	<section id="section7" class="cd-section">
+		<div class="cd-section-text">
+			<h1>Hit me up!</h1>
+		</div>
+	</section>
 </div>
+</main>
 
+<div class="ripple-wrap"><div class="ripple"></div></div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src="js/main.js"></script>
 </body>
 </html>
