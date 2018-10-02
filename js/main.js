@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+
 	var contentSections = $('.cd-section'),
 		navigationItems = $('#cd-vertical-nav a');
 
@@ -46,9 +46,9 @@ jQuery(document).ready(function($){
         	600
         );
 	}
-});
 
-$(document).ready(function() {
+// transition code begins
+
 	var page_url;
   var ripple_wrap = $('.ripple-wrap'),
       rippler = $('.ripple'),
@@ -109,4 +109,3 @@ $(document).ready(function() {
 	    loadNewContent(link);
 	});
   
-});
