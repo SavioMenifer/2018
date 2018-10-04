@@ -1,6 +1,9 @@
 // global variables for mouse position
 var mouseX, mouseY;
 
+// global variable for scroll position
+var tempScrollTop = $(window).scrollTop();
+
 // setting up barba views
 var Homepage = Barba.BaseView.extend({
 	namespace: 'home',
@@ -54,10 +57,11 @@ var Homepage = Barba.BaseView.extend({
 			);
 		}
 
-		// saving mouse position when section link clicked
+		// saving mouse and scroll position when section link clicked
 		$('.section-link').on('click', function(e) {
 			mouseX = e.clientX;
 			mouseY = e.clientY;
+			tempScrollTop = $(window).scrollTop();
 		});
 	}
 });
@@ -169,7 +173,7 @@ var ripple_wrap = $('.ripple-wrap'),
 					if (load_finished) {
 						el.style.WebkitAnimationPlayState = "running";
 						el.style.animationPlayState = "running";
-						setTimeout(_this.animFinish, 110); // wait for transition to finish
+						setTimeout(_this.animFinish, 130); // wait for transition to finish
 						return;
 					} else {
 						window.requestAnimationFrame(function() {monitor(el)});
@@ -213,7 +217,7 @@ var ripple_wrap = $('.ripple-wrap'),
 					if (load_finished) {
 						el.style.WebkitAnimationPlayState = "running";
 						el.style.animationPlayState = "running";
-						setTimeout(_this.animFinish, 110); // wait for transition to finish
+						setTimeout(_this.animFinish, 500); // wait for transition to finish
 						return;
 					} else {
 						window.requestAnimationFrame(function() {monitor(el)});
@@ -239,9 +243,9 @@ var ripple_wrap = $('.ripple-wrap'),
 		},
 
 		animFinish: function() {
+			$(window).scrollTop(tempScrollTop);
 			$new_elem.css({visibility: 'visible', opacity: 1});
-			document.body.scrollTop = 0;
-			_this.done();	
+			_this.done();
 		}
 	});
 

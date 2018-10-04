@@ -136,7 +136,7 @@ body {
     margin-left:-2500px;
     border-color: #009688;
   }
-  40% { 
+  60% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -145,7 +145,7 @@ body {
     border-color: #009688;
   }
   
-  41% { 
+  61% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -168,7 +168,7 @@ body {
     margin-left:-2500px;
     border-color: #009688;
   }
-  40% { 
+  60% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -176,7 +176,7 @@ body {
     margin-left:-1500px; 
     border-color: #009688;
   }
-  41% { 
+  61% { 
     height: 0;
     width: 0;
     border-width: 1500px;
