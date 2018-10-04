@@ -18,49 +18,52 @@
 <body>
 
 <div class="ripple-wrap"><div class="ripple"></div></div>
+<div class="reverse-ripple-wrap"><div class="reverse-ripple"></div></div>
+
+<div id="barba-wrapper"><div class="barba-container" data-namespace="home">
 
 <main>
 <div class="cd-index cd-main-content">
 	<nav id="cd-vertical-nav">
 		<ul>
 			<li>
-				<a href="#section1" data-number="1">
+				<a class="nav-link" href="#section1" data-number="1">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Intro</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section2" data-number="2">
+				<a class="nav-link" href="#section2" data-number="2">
 					<span class="cd-dot"></span>
 					<span class="cd-label">About</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section3" data-number="3">
+				<a class="nav-link" href="#section3" data-number="3">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Posters</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section4" data-number="4">
+				<a class="nav-link" href="#section4" data-number="4">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Logos</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section5" data-number="5">
+				<a class="nav-link" href="#section5" data-number="5">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Print Design</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section6" data-number="6">
+				<a class="nav-link" href="#section6" data-number="6">
 					<span class="cd-dot"></span>
 					<span class="cd-label">UX Design</span>
 				</a>
 			</li>
 			<li>
-				<a href="#section7" data-number="7">
+				<a class="nav-link" href="#section7" data-number="7">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Contact</span>
 				</a>
@@ -91,12 +94,12 @@
 	</section>
 	<section id="section5" class="cd-section">
 		<div class="cd-section-text">
-			<h1>I even dabble in print design.</h1>
+			<h1>I even dabble in <a class="section-link" href="work.html#print">print design.</a></h1>
 		</div>
 	</section>
 	<section id="section6" class="cd-section">
 		<div class="cd-section-text">
-			<h1>But my heart lies in UX Design.</h1>
+			<h1>But my heart lies in <a class="section-link" href="work.html#ux">UX Design.</a></h1>
 		</div>
 	</section>
 	<section id="section7" class="cd-section">
@@ -107,7 +110,12 @@
 </div>
 </main>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+</div></div>
+
+<script src='js/jquery.js'></script>
+<script src="js/barba.min.js" type="text/javascript"></script>
+<script src='js/jquery.fancybox.min.js'></script>
+<script src='js/isotope.pkgd.min.js'></script>
 <script src="js/main.js"></script>
 
 </body>

@@ -118,6 +118,105 @@ body {
 
 }
 
+/* Reverse ripple transition */
+.reverse-ripple-wrap {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  font-size: 0;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+@-webkit-keyframes REVRIPPLER {
+  0% { 
+    border-width: 1500px;
+    height: 2000px;
+    width: 2000px;
+    margin-top: -2500px;
+    margin-left:-2500px;
+    border-color: #009688;
+  }
+  40% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #009688;
+  }
+  
+  41% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #009688;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    border-width: 0;
+  }
+}
+@keyframes REVRIPPLER {
+  0% {
+    border-width: 1500px;
+    height: 2000px;
+    width: 2000px;
+    margin-top: -2500px;
+    margin-left:-2500px;
+    border-color: #009688;
+  }
+  40% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #009688;
+  }
+  41% { 
+    height: 0;
+    width: 0;
+    border-width: 1500px;
+    margin-top: -1500px;
+    margin-left:-1500px; 
+    border-color: #009688;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    border-width: 0;
+  }
+}
+.reverse-ripple {
+  display: block;
+  height: 2000px;
+  width: 2000px;
+  border-width: 1500px;
+  border-style: solid;
+  border-color: #00796b;
+  border-radius: 100%;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  -webkit-animation: none;
+  animation: none;
+}
+.reverse-ripple-wrap.goripple {
+  display: block;
+}
+.reverse-ripple-wrap.goripple .reverse-ripple {
+ -webkit-animation-name: REVRIPPLER;
+ -webkit-animation-duration: 1.5s;
+ -webkit-animation-fill-mode: forwards;
+ animation-name: REVRIPPLER;
+ animation-duration: 1.5s;
+ animation-fill-mode: forwards;
+
+}
+
 /* Vertical nav dots */
 .cd-img-replace {
   /* replace text with a background-image */
