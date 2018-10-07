@@ -6,6 +6,7 @@ header {
   right: 0;
   top: 0;
   z-index: 1;
+  align-items: center;
   background-color: white;
   box-shadow: 0px -16px 15px 20px rgba(0,0,0,0.4);
   user-select: none;
@@ -15,10 +16,9 @@ header {
 }
 
 .cd-back {
+  font-size: 1.5em;
   margin-left: 20px;
 }
-
-/* back button */
 .cd-back-arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -29,23 +29,22 @@ header {
 }
 
 /* dropdown */
+.cd-dropdown{
+  align-self: center;
+  height: 2em;
+}
+
 .dropdown-el {
-  min-width: 12em;
-  position: absolute;
-  display: block;
-  margin-right: 1em;
+  position:absolute;
+  min-width: 9em;
   min-height: 2em;
   max-height: 2em;
   overflow: hidden;
-  top: .5em;
   cursor: pointer;
-  text-align: left;
-  white-space: nowrap;
-  color: #444;
   outline: none;
   border: .06em solid transparent;
-  border-radius: 1em;
-  /*background-color: #cde4f5;*/
+  border-radius: 0.25em;
+  background-color: #cde4f5;
   transition: 0.3s all ease-in-out;
 }
 .dropdown-el input {
@@ -57,9 +56,7 @@ header {
   height: 2em;
   line-height: 2em;
   padding-left: 1em;
-  padding-right: 3em;
   cursor: pointer;
-  position: relative;
   transition: 0.3s color ease-in-out;
 }
 .dropdown-el label:nth-child(2) {
@@ -79,16 +76,14 @@ header {
 .dropdown-el::after {
   content: "";
   position: absolute;
-  right: 0.8em;
+  right: 1em;
   top: 0.9em;
   border: 0.3em solid #3694d7;
   border-color: #3694d7 transparent transparent transparent;
-  transition: .4s all ease-in-out;
 }
 .dropdown-el.expanded {
   border: 0.06em solid #3694d7;
   background: #fff;
-  border-radius: .25em;
   padding: 0;
   box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
   max-height: 15em;
@@ -110,6 +105,7 @@ header {
 
 /* grid css */
 .wrapper {
+  padding-top: 4rem;
   margin: 50px auto;
   background: #fff;
   max-width: 800px;

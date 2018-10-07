@@ -99,7 +99,7 @@ var Workpage = Barba.BaseView.extend({
 			// Masonry Grid
 			$('.grid').isotope({
 				filter: '*',
-				temSelector: '.grid-item',
+				itemSelector: '.grid-item',
 				masonry: {
 					columnWidth: 180,
 					fitWidth: true, // When enabled, you can center the container with CSS.
