@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:800');
-@font-face {font-family: 'Gentona-ExtraBoldDEMO';src: url('webfonts/37B97B_0_0.eot');src: url('webfonts/37B97B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/37B97B_0_0.woff2') format('woff2'),url('webfonts/37B97B_0_0.woff') format('woff'),url('webfonts/37B97B_0_0.ttf') format('truetype');}
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 html {
   background: #f2f2f2;
@@ -36,11 +35,11 @@ body {
   font-family: 'Binario Regular', sans-serif;
   font-size: 2.5em;
   line-height: 1.2;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.15em;
 }
 
 .cd-section-text p {
-  font-family: 'Binario Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 0.75em;
 }
 
@@ -388,7 +387,8 @@ body {
   margin-right: 5px;
   padding: .4em .5em;
   color: black;
-  font-size: 14px;
+  font-family: 'Rubik';
+  font-size: 19px;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
@@ -416,8 +416,8 @@ body {
 }
 .touch .cd-nav-trigger span {
   position: absolute;
-  height: 22px;
-  width: 22px;
+  height: 24px;
+  width: 24px;
   background-color: #3e3947;
   border-radius: 50%;
   left: 50%;
@@ -436,8 +436,8 @@ body {
   width : 12px;
   height : 2px;
   position : absolute;
-  top : 10px;
-  right: 5px;
+  top : 11px;
+  right: 6px;
 }
 .touch .cd-nav-trigger span::after {
   transform: rotate(90deg);
@@ -448,10 +448,11 @@ body {
   z-index: 1;
   right: 5%;
   top: 30px;
-  width: 90%;
+  width: 60%;
   max-width: 300px;
   max-height: 21.5em;
-  font-size: 20px;
+  font-family: 'Rubik';
+  font-size: 18px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transform-origin: right top;
@@ -474,6 +475,8 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
 }
 .touch #cd-vertical-nav a {
+  color: black;
+  text-decoration: none;
   display: block;
   padding: 1em;
   border-bottom: 1px solid rgba(62, 57, 71, 0.1);
