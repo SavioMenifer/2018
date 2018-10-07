@@ -403,19 +403,21 @@ body {
 /* Touch devices */
 .touch .cd-nav-trigger {
   display: block;
+  background-color: transparent;
+  border-radius: 50%;
   z-index: 2;
   position: fixed;
   top: 30px;
   right: 5%;
-  height: 44px;
-  width: 44px; /*
-  border-radius: 0.25em;
-  background: rgba(255, 255, 255, 0.9); */
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s ease;
+  transform-origin: 50% 50%;
 }
 .touch .cd-nav-trigger span {
   position: absolute;
-  height: 12px;
-  width: 12px;
+  height: 22px;
+  width: 22px;
   background-color: #3e3947;
   border-radius: 50%;
   left: 50%;
@@ -427,21 +429,18 @@ body {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-} /*
+}
 .touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  background-color: inherit;
-  border-radius: inherit;
-} */
-.touch .cd-nav-trigger span::before {
-  top: -9px;
+  background : #f2f2f2;
+  content : '';
+  width : 12px;
+  height : 2px;
+  position : absolute;
+  top : 10px;
+  right: 5px;
 }
 .touch .cd-nav-trigger span::after {
-  bottom: -9px;
+  transform: rotate(90deg);
 }
 
 .touch #cd-vertical-nav {
@@ -452,6 +451,7 @@ body {
   width: 90%;
   max-width: 300px;
   max-height: 21.5em;
+  font-size: 20px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transform-origin: right top;
@@ -492,34 +492,13 @@ body {
   transform: scale(1);
 }
 .touch #cd-vertical-nav.open + .cd-nav-trigger {
-  background-color: transparent;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span {
-  background-color: rgba(62, 57, 71, 0);
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
-  background-color: #3e3947;
-  height: 3px;
-  width: 20px;
-  border-radius: 0;
-  left: -8px;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 1px;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
-  bottom: 0;
 }
+
 .touch #cd-vertical-nav li:last-child a {
   border-bottom: none;
 }
