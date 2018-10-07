@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:800');
+@font-face {font-family: 'Gentona-ExtraBoldDEMO';src: url('webfonts/37B97B_0_0.eot');src: url('webfonts/37B97B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/37B97B_0_0.woff2') format('woff2'),url('webfonts/37B97B_0_0.woff') format('woff'),url('webfonts/37B97B_0_0.ttf') format('truetype');}
+
 html {
   background: #f2f2f2;
 }
 
 body {
   margin: 0;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 26px 26px;
+  -moz-background-size: 26px 26px;
+  background-size: 26px 26px;
 }
 
 .cd-section {
@@ -13,18 +23,39 @@ body {
   position: relative;
 }
 
-.cd-section h1 {
-  font-family: 'Palanquin Dark', sans-serif;
-  font-size: 90px;
-  line-height: 1.2;
-  text-align: left;
-}
-
 .cd-section-text {
   max-width: 60vw;
   left: 8%;
   bottom: 8%;
   position: absolute;
+}
+
+.cd-section-text h1 {
+  font-family: 'Binario Regular', sans-serif;
+  font-size: 90px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* SVG Morph */
+.morph-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.morph {
+  position: relative;
+  height: 50%;
+  fill: #282faf;
+  flex: none;
 }
 
 /* Ripple transition */
@@ -136,7 +167,7 @@ body {
     margin-left:-2500px;
     border-color: #009688;
   }
-  60% { 
+  40% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -145,7 +176,7 @@ body {
     border-color: #009688;
   }
   
-  61% { 
+  41% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -168,7 +199,7 @@ body {
     margin-left:-2500px;
     border-color: #009688;
   }
-  60% { 
+  40% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -176,7 +207,7 @@ body {
     margin-left:-1500px; 
     border-color: #009688;
   }
-  61% { 
+  41% { 
     height: 0;
     width: 0;
     border-width: 1500px;
@@ -275,9 +306,47 @@ body {
 }
 .no-touch #cd-vertical-nav a:hover .cd-label {
   opacity: 1;
+  /*
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  */
 }
-.no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: white;
+/*
+.no-touch #cd-vertical-nav a:hover .cd-label:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(42, 42, 42, 0);
+  border-left-color: rgba(0, 0, 0, 0.7);
+  border-width: 6px;
+  margin-top: -6px;
+}
+*/
+.no-touch #cd-vertical-nav a[data-number="1"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="1"]:hover .cd-dot{
+  background-color: #00FFD8;
+}
+.no-touch #cd-vertical-nav a[data-number="2"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="2"]:hover .cd-dot {
+  background-color: red;
+}
+.no-touch #cd-vertical-nav a[data-number="3"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="3"]:hover .cd-dot {
+  background-color: blue;
+}
+.no-touch #cd-vertical-nav a[data-number="4"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="4"]:hover .cd-dot {
+  background-color: green;
+}
+.no-touch #cd-vertical-nav a[data-number="5"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="5"]:hover .cd-dot {
+  background-color: orange;
+}
+.no-touch #cd-vertical-nav a[data-number="6"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="6"]:hover .cd-dot {
+  background-color: yellow;
+}
+.no-touch #cd-vertical-nav a[data-number="7"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="7"]:hover .cd-dot {
+  background-color: brown;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
@@ -286,10 +355,10 @@ body {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: #d88683;
-  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-  transition: transform 0.2s, background-color 0.5s;
+  background-color: #2a2a2a;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.3s;
+  -moz-transition: -moz-transform 0.2s, background-color 0.3s;
+  transition: transform 0.2s, background-color 0.3s;
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -298,9 +367,9 @@ body {
 }
 .no-touch #cd-vertical-nav .cd-label {
   position: relative;
-  margin-right: 10px;
+  margin-right: 5px;
   padding: .4em .5em;
-  color: white;
+  color: #2a2a2a;
   font-size: 14px;
   font-size: 0.875rem;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -322,14 +391,14 @@ body {
   top: 30px;
   right: 5%;
   height: 44px;
-  width: 44px;
+  width: 44px; /*
   border-radius: 0.25em;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9); */
 }
 .touch .cd-nav-trigger span {
   position: absolute;
-  height: 4px;
-  width: 4px;
+  height: 12px;
+  width: 12px;
   background-color: #3e3947;
   border-radius: 50%;
   left: 50%;
@@ -341,7 +410,7 @@ body {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-}
+} /*
 .touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
   content: '';
   height: 100%;
@@ -350,7 +419,7 @@ body {
   left: 0;
   background-color: inherit;
   border-radius: inherit;
-}
+} */
 .touch .cd-nav-trigger span::before {
   top: -9px;
 }
@@ -364,8 +433,8 @@ body {
   right: 5%;
   top: 30px;
   width: 90%;
-  max-width: 400px;
-  max-height: 90%;
+  max-width: 300px;
+  max-height: 21.5em;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transform-origin: right top;

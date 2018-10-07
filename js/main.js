@@ -82,15 +82,24 @@ var Workpage = Barba.BaseView.extend({
 
 			var selector = $('#' + hash).next("label").attr("filter");
 			$('.grid').isotope({
+				transitionDuration: 0,
 				filter: selector
 			});
 		}
+
+		// Fancybox
+		$('[data-fancybox]').fancybox({
+			buttons : [ 
+				'fullScreen',
+				'close'
+			]
+		});
 
 		$(function() {
 			// Masonry Grid
 			$('.grid').isotope({
 				filter: '*',
-				// itemSelector: '.grid-item',
+				temSelector: '.grid-item',
 				masonry: {
 					columnWidth: 180,
 					fitWidth: true, // When enabled, you can center the container with CSS.
@@ -104,26 +113,20 @@ var Workpage = Barba.BaseView.extend({
 			$('.dropdown-el').click(function(e) {
 				e.preventDefault();
 				e.stopPropagation();
+				if ($(this).hasClass('expanded')) {
+					$('#' + $(e.target).attr('for')).prop('checked', true);
+					var selector = $(e.target.getAttribute("filter"));
+					$('.grid').isotope({
+						transitionDuration: '0.5s',
+						filter: selector
+					});
+				}
 				$(this).toggleClass('expanded');
-				$('#' + $(e.target).attr('for')).prop('checked', true);
-				var selector = $(e.target.getAttribute("filter"));
-				$('.grid').isotope({
-					filter: selector
-				});
 				return false;
 			});
 
 			$(document).click(function() {
 				$('.dropdown-el').removeClass('expanded');
-			});
-
-			// Fancybox
-			$('.fancybox').fancybox({
-				helpers: {
-					overlay: {
-						locked: false
-					}
-				}
 			});
 		});
 	}
@@ -217,7 +220,7 @@ var ripple_wrap = $('.ripple-wrap'),
 					if (load_finished) {
 						el.style.WebkitAnimationPlayState = "running";
 						el.style.animationPlayState = "running";
-						setTimeout(_this.animFinish, 500); // wait for transition to finish
+						setTimeout(_this.animFinish, 600); // wait for transition to finish
 						return;
 					} else {
 						window.requestAnimationFrame(function() {monitor(el)});
