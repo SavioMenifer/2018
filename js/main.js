@@ -90,7 +90,6 @@ var Workpage = Barba.BaseView.extend({
 		// Fancybox
 		$('[data-fancybox]').fancybox({
 			buttons : [ 
-				'fullScreen',
 				'close'
 			]
 		});
