@@ -71,19 +71,38 @@ var Workpage = Barba.BaseView.extend({
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
 
-		// set dropdown to current item from url
-		function setDropdown() {
+		// set navigation to current item from url and filter
+		function setNavigation() {
 			$(".dropdown-el input").each(function() {
-				if ($(this).attr('id') === hash) {
-					$("#all").prop('checked', false);
+				if ($(this).data('hash') === hash) {
+					console.log($('input[data-hash="all"]'));
+					$('input[data-hash="all"]').prop('checked', false);
 					$(this).prop('checked', true);
 				}
 			});
+
+		if (hash) {
+			$('.cd-filter .current').removeClass('current');
+			$('a[data-hash="' + hash + '"]').addClass('current');
+		}
 
 			var selector = $('#' + hash).next("label").attr("filter");
 			$('.grid').isotope({
 				transitionDuration: 0,
 				filter: selector
+			});
+		}
+
+		function navigationChanged(f) {
+			var section = $('label[filter="' + f + '"]').attr('for');
+			$('.cd-filter .current').removeClass('current');
+			$('a[data-hash="' + section + '"]').addClass('current');
+			
+			$('input[data-hash="' + section + '"]').prop('checked', true);
+
+			$('.grid').isotope({
+				transitionDuration: '0.5s',
+				filter: f
 			});
 		}
 
@@ -107,18 +126,20 @@ var Workpage = Barba.BaseView.extend({
 				// layoutMode: 'fitRows'
 			});
 
-			setDropdown();
+			setNavigation();
+
+			$('.cd-filter a').click(function(e){
+				var filter = $(this).data('filter');
+				navigationChanged(filter);
+				return false;
+			});
 
 			$('.dropdown-el').click(function(e) {
 				e.preventDefault();
 				e.stopPropagation();
 				if (e.target.tagName === "LABEL") {
-					$('#' + $(e.target).attr('for')).prop('checked', true);
-					var selector = $(e.target.getAttribute("filter"));
-					$('.grid').isotope({
-						transitionDuration: '0.5s',
-						filter: selector
-					});
+					var filter = e.target.getAttribute("filter");
+					navigationChanged(filter);
 				}
 				$(this).toggleClass('expanded');
 				return false;

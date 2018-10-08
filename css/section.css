@@ -37,8 +37,34 @@ header {
   margin-right: 3px
 }
 
+/*filter links*/
+.cd-filter {
+  flex: 0 1 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cd-filter a {
+  margin: 1.8vw;
+  font-size: 1.2em;
+  font-family: 'Chivo', sans-serif;
+  text-decoration: none;
+  color: #f2f2f2;
+  transition: 0.3s color ease-in-out;
+}
+
+.cd-filter a:hover {
+  color: #000;
+}
+
+.cd-filter a.current {
+  color: #000;
+}
+
 /* dropdown */
 .cd-dropdown{
+  display: none;
   flex: 0 1 auto;
   height: 2.5em;
   width: 9em;
@@ -57,7 +83,7 @@ header {
   outline: none;
   border: .06em solid transparent;
   border-radius: 0.25em;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
   transition: 0.3s all ease-in-out;
 }
 .dropdown-el input {
@@ -66,7 +92,7 @@ header {
 .dropdown-el label {
   font-size: 1.2em;
   font-family: 'Chivo', sans-serif;
-  border-top: .06em solid #d9d9d9;
+  border-top: .06em solid #f2f2f2;
   display: block;
   height: 2em;
   line-height: 2em; /*was 2*/
@@ -76,7 +102,7 @@ header {
 }
 .dropdown-el label:nth-child(2) {
   margin-top: 2em;
-  border-top: .06em solid #d9d9d9;
+  border-top: .06em solid #f2f2f2;
 }
 .dropdown-el input:checked + label {
   display: block;
@@ -129,30 +155,6 @@ header {
   */
 }
 
-.filter {
-  padding: 20px 0;
-  margin-bottom: 20px;
-  border-bottom: solid 1px #e3e3e3;
-  text-align: center;
-  font-size: 12px;
-}
-
-.filter a {
-  margin-right: 10px;
-  color: #666;
-  text-decoration: none;
-  border: 1px solid #ccc;
-  padding: 4px 15px;
-  border-radius: 50px;
-  display: inline-block;
-}
-
-.filter a.current {
-  background: #1e1e1e;
-  border: 1px solid #1e1e1e;
-  color: #f9f9f9;
-}
-
 .grid {
   margin: 0 auto;
   -webkit-perspective: 1000px;
@@ -162,6 +164,7 @@ header {
 .grid-item {
   width: 180px;
   height: auto;
+  background: #f2f2f2;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -176,13 +179,19 @@ header {
 
 @media only screen and (max-width: 380px) {
   .cd-back span {
-    visibility: hidden;
+    display: none;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 830px) {
   .wrapper {
     width: 100%;
+  }
+  .cd-dropdown {
+    display: block;
+  }
+  .cd-filter {
+    display: none;
   }
 }
 
