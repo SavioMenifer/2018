@@ -40,7 +40,7 @@ body {
 
 .cd-section-text p {
   font-family: 'Chivo', sans-serif;
-  font-size: 0.65em;
+  font-size: 0.7em;
 }
 
 .cd-section-text a {
@@ -379,7 +379,7 @@ body {
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-  top: 0.35em;
+  top: 0.2em;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -399,7 +399,7 @@ body {
   padding: .4em .5em;
   color: black;
   font-family: 'Chivo';
-  font-size: 19px;
+  font-size: 16px;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
@@ -520,5 +520,11 @@ body {
 @media only screen and (min-width: 768px) {
   .touch .cd-nav-trigger, .touch #cd-vertical-nav {
     bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .cd-section-text p {
+    font-size: 16px;
   }
 }

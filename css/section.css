@@ -17,8 +17,12 @@ header {
 
 .cd-back {
   font-size: 1.5em;
+  font-family: 'Binario Regular', sans-serif;
   margin-left: 20px;
+  text-decoration: none;
+  color: black;
 }
+
 .cd-back-arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -31,14 +35,14 @@ header {
 /* dropdown */
 .cd-dropdown{
   align-self: center;
-  height: 2em;
+  height: 2.5em;
 }
 
 .dropdown-el {
   position:absolute;
   min-width: 9em;
-  min-height: 2em;
-  max-height: 2em;
+  min-height: 2.5em;
+  max-height: 2.5em;
   overflow: hidden;
   cursor: pointer;
   outline: none;
@@ -51,11 +55,13 @@ header {
   display: none;
 }
 .dropdown-el label {
+  font-size: 1.5em;
+  font-family: 'Binario Regular', sans-serif;
   border-top: .06em solid #d9d9d9;
   display: block;
   height: 2em;
-  line-height: 2em;
-  padding-left: 1em;
+  line-height: 1.5em; /*was 2*/
+  padding-left: 0.5em;
   cursor: pointer;
   transition: 0.3s color ease-in-out;
 }
