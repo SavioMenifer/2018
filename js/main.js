@@ -75,18 +75,15 @@ var Workpage = Barba.BaseView.extend({
 		function setNavigation() {
 			$(".dropdown-el input").each(function() {
 				if ($(this).data('hash') === hash) {
-					console.log($('input[data-hash="all"]'));
 					$('input[data-hash="all"]').prop('checked', false);
 					$(this).prop('checked', true);
 				}
 			});
 
-		if (hash) {
 			$('.cd-filter .current').removeClass('current');
 			$('a[data-hash="' + hash + '"]').addClass('current');
-		}
 
-			var selector = $('#' + hash).next("label").attr("filter");
+			var selector = $('label[for="' + hash + '"]').attr('filter');
 			$('.grid').isotope({
 				transitionDuration: 0,
 				filter: selector
@@ -126,7 +123,9 @@ var Workpage = Barba.BaseView.extend({
 				// layoutMode: 'fitRows'
 			});
 
-			setNavigation();
+			if (hash) {
+				setNavigation();
+			}
 
 			$('.cd-filter a').click(function(e){
 				var filter = $(this).data('filter');
@@ -251,8 +250,8 @@ var ripple_wrap = $('.ripple-wrap'),
 				reverse_ripple_wrap.removeClass('goripple');
 			});
 
-			reverse_rippler.css('left', mouseX + 'px');
-			reverse_rippler.css('top', mouseY + 'px');
+			//reverse_rippler.css('left', mouseX + 'px');
+			//reverse_rippler.css('top', mouseY + 'px');
 			reverse_ripple_wrap.addClass('goripple');
 			window.requestAnimationFrame(function() {monitor(reverse_rippler[0])});
 

@@ -24,9 +24,8 @@ body {
 }
 
 .cd-section-text {
-  font-size: 2.5vmax;
-  min-width: 50vw;
-  max-width: 70vw;
+  max-width: 60%;
+  font-size: 2.5vw;
   left: 8%;
   bottom: 10%;
   position: absolute;
@@ -259,8 +258,8 @@ body {
   border-color: #00796b;
   border-radius: 100%;
   position: absolute;
-  top: 300px;
-  left: 300px;
+  top: 50%;
+  left: 50%;
   -webkit-animation: none;
   animation: none;
 }
@@ -507,5 +506,14 @@ body {
 @media only screen and (max-width: 950px) {
   .cd-section-text p {
     font-size: 16px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .cd-section-text {
+    max-width: 80%;
+  }
+  .cd-section-text h1 {
+    font-size: 5em;
   }
 }
