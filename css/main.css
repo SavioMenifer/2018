@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Chivo');
 
 html {
   background: #f2f2f2;
@@ -39,12 +39,23 @@ body {
 }
 
 .cd-section-text p {
-  font-family: 'Rubik', sans-serif;
-  font-size: 0.75em;
+  font-family: 'Chivo', sans-serif;
+  font-size: 0.65em;
+}
+
+.cd-section-text a {
+  transition: color .4s ease-in-out;
+}
+
+#posters-link:link, #posters-link:visited {
+  color: green;
+}
+#posters-link:hover {
+  color: black;
 }
 
 .contact-icons {
-  margin-top: 0.3em;
+  margin-top: 0.55em;
 }
 
 .contact-icons img {
@@ -387,7 +398,7 @@ body {
   margin-right: 5px;
   padding: .4em .5em;
   color: black;
-  font-family: 'Rubik';
+  font-family: 'Chivo';
   font-size: 19px;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -451,7 +462,7 @@ body {
   width: 60%;
   max-width: 300px;
   max-height: 21.5em;
-  font-family: 'Rubik';
+  font-family: 'Chivo';
   font-size: 18px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
