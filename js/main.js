@@ -113,7 +113,7 @@ var Workpage = Barba.BaseView.extend({
 			$('.dropdown-el').click(function(e) {
 				e.preventDefault();
 				e.stopPropagation();
-				if ($(this).hasClass('expanded')) {
+				if (e.target.tagName === "LABEL") {
 					$('#' + $(e.target).attr('for')).prop('checked', true);
 					var selector = $(e.target.getAttribute("filter"));
 					$('.grid').isotope({
