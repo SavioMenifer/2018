@@ -61,7 +61,7 @@ var Homepage = Barba.BaseView.extend({
 		$('.section-link').on('click', function(e) {
 			mouseX = e.clientX;
 			mouseY = e.clientY;
-			tempScrollTop = $(window).scrollTop();
+			tempScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		});
 	}
 });
@@ -263,7 +263,7 @@ var ripple_wrap = $('.ripple-wrap'),
 		},
 
 		animFinish: function() {
-			$(window).scrollTop(tempScrollTop);
+			document.documentElement.scrollTop = document.body.scrollTop = tempScrollTop;
 			$new_elem.css({visibility: 'visible', opacity: 1});
 			_this.done();
 		}
