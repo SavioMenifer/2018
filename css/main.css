@@ -1,3 +1,30 @@
+/*
+Font:     Binario
+Style:    
+URL:    https://www.youworkforthem.com/font/T6484/binario
+Foundry:  Tarallo Design
+Foundry:  https://www.youworkforthem.com/designer/744/tarallo-design
+Copyright:  Copyright (c) 2017 by PYRS Fontlab Ltd. / Made with FontLab. All rights reserved.
+Version:  17
+Created:  July 10, 2018
+License:  https://www.youworkforthem.com/font-license 
+License:  The WebFont(s) listed in this document must follow the YouWorkForThem
+      WebFont license rules. All other parties are strictly restricted 
+      from using the WebFonts(s) listed without a purchased license. 
+      All details above must always remain unaltered and visible in your CSS.
+*/
+@font-face {
+  font-family: 'Binario-Regular';
+  src: url('webfonts/binario-regular.eot');
+  src: url('webfonts/binario-regular.eot?#iefix') format('embedded-opentype'),
+             url('webfonts/binario-regular.woff2') format('woff2'),
+       url('webfonts/binario-regular.woff') format('woff'),
+       url('webfonts/binario-regular.ttf') format('truetype'),
+       url('webfonts/binario-regular.svg#youworkforthem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Chivo');
 
 html {
@@ -36,15 +63,17 @@ a {
 }
 
 .cd-section-text h1 {
-  font-family: 'Binario Regular', sans-serif;
+  font-family: 'Binario-Regular', sans-serif;
   font-size: 2.5em;
   line-height: 1.1;
   margin-bottom: 0.15em;
 }
 
 .cd-section-text p {
+  width: 80%;
   font-family: 'Chivo', sans-serif;
   font-size: 0.7em;
+  line-height: 1.1;
 }
 
 .cd-section-text a {
@@ -65,8 +94,8 @@ a {
 .contact-icons img {
   margin-right: 0.5em;
   max-height: 128px;
-  min-height: 40px;
-  height: 1.7em;
+  min-height: 32px;
+  height: 1.3em;
 }
 
 /* SVG Morph */
@@ -357,9 +386,6 @@ a {
 .no-touch #cd-vertical-nav a[data-number="6"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="6"]:hover .cd-dot {
   background-color: yellow;
 }
-.no-touch #cd-vertical-nav a[data-number="7"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="7"]:hover .cd-dot {
-  background-color: brown;
-}
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
@@ -531,6 +557,7 @@ a {
     font-size: 4em;
   }
   .cd-section-text p {
+    width: 85%;
     font-size: 1.3em;
   }
 }
