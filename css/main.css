@@ -363,7 +363,7 @@ a {
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-  top: 9px;
+  top: 8px;
   height: 12px;
   width: 12px;
   border-radius: 50%;

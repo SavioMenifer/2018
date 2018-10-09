@@ -263,7 +263,7 @@ var ripple_wrap = $('.ripple-wrap'),
 		},
 
 		animFinish: function() {
-			window.scrollTo(0, tempScrollTop);
+			setTimeout(function() {window.scrollTo(0, tempScrollTop);},1);
 			$new_elem.css({visibility: 'visible', opacity: 1});
 			_this.done();
 		}
