@@ -34,7 +34,7 @@ body {
 .cd-section-text h1 {
   font-family: 'Binario Regular', sans-serif;
   font-size: 2.5em;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.15em;
 }
 
@@ -515,5 +515,18 @@ body {
   }
   .cd-section-text h1 {
     font-size: 5em;
+    margin-bottom: 0.20em;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 949px) {
+  .cd-section-text {
+    max-width: 80%;
+  }
+  .cd-section-text h1 {
+    font-size: 4em;
+  }
+  .cd-section-text p {
+    font-size: 1.3em;
   }
 }
