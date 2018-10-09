@@ -17,6 +17,10 @@ body {
   background-size: 26px 26px;
 }
 
+a {
+  outline: none !important;
+}
+
 .cd-section {
   max-width: 100vw;
   height: 100vh;

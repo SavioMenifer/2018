@@ -2,7 +2,7 @@
 var mouseX, mouseY;
 
 // global variable for scroll position
-var tempScrollTop = $(window).scrollTop();
+var tempScrollTop = 0;
 
 // setting up barba views
 var Homepage = Barba.BaseView.extend({
@@ -250,8 +250,6 @@ var ripple_wrap = $('.ripple-wrap'),
 				reverse_ripple_wrap.removeClass('goripple');
 			});
 
-			//reverse_rippler.css('left', mouseX + 'px');
-			//reverse_rippler.css('top', mouseY + 'px');
 			reverse_ripple_wrap.addClass('goripple');
 			window.requestAnimationFrame(function() {monitor(reverse_rippler[0])});
 
