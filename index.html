@@ -9,9 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	
 	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/normalize.css" />  <!-- remove later -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/section.css" />
+	<link rel="stylesheet" type="text/css" href="css/work.css" />
+	<link rel='stylesheet' href='css/jquery.fancybox.min.css'>
 	<script src="js/modernizr.js"></script>
 </head>
 
@@ -24,15 +24,17 @@
 
 <div class="cd-index cd-main-content">
 	<div class="morph-wrap">
-		<svg class="morph1" width="1400" height="770" viewBox="0 0 1400 770">
-			<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
-		</svg>
-		<svg class="morph2" width="1400" height="770" viewBox="0 0 1400 770">
-			<path d="M 415.6,206.3 C 407.4,286.6 438.1,373.6 496.2,454.8 554.3,536.1 497,597.2 579.7,685.7 662.4,774.1 834.3,731.7 898.5,653.4 962.3,575 967.1,486 937.7,370 909.3,253.9 937.7,201.5 833.4,105.4 729.3,9.338 602.2,13.73 530.6,41.91 459,70.08 423.9,126.1 415.6,206.3 Z"/>
-		</svg>
-		<svg class="morph3" width="1400" height="770" viewBox="0 0 1400 770">
-			<path d="M 383.8,163.4 C 335.8,352.3 591.6,317.1 608.7,420.8 625.8,524.5 580.5,626 647.3,688 714,750 837.1,760.5 940.9,661.5 1044,562.3 1041,455.8 975.8,393.6 909.8,331.5 854.2,365.4 784.4,328.1 714.6,290.8 771.9,245.2 733.1,132.4 694.2,19.52 431.9,-25.48 383.8,163.4 Z"/>
-		</svg>
+		<div class="svg-wrap">
+			<svg class="morph1" width="1400" height="770" viewBox="0 0 1400 770" preserveAspectRatio="xMidYMid meet">
+				<path d="M 959.29 385 L 959.29 385 C 959.29 528.2 843.2 644.29 700 644.29 C 556.8 644.29 440.71 528.2 440.71 385 C 440.71 241.8 556.8 125.71 700 125.71 C 843.2 125.71 959.29 241.8 959.29 385"/>
+			</svg>
+			<svg class="morph2" width="1400" height="770" viewBox="0 0 1400 770" preserveAspectRatio="xMidYMid meet">
+				<path d="M 875.6 385 C 875.6 431.554 857.087 476.249 824.168 509.168 C 791.249 542.087 746.554 560.6 700 560.6 C 653.446 560.6 608.751 542.087 575.832 509.168 C 542.913 476.249 524.4 431.554 524.4 385 C 524.4 338.446 542.913 293.751 575.832 260.832 C 608.751 227.913 653.446 209.4 700 209.4 C 730.822 209.4 761.107 217.515 787.8 232.926 C 814.493 248.337 836.663 270.507 852.074 297.2 C 867.485 323.893 875.6 354.178 875.6 385 L 875.6 385"/>
+			</svg>
+			<svg class="morph3" width="1400" height="770" viewBox="0 0 1400 770" preserveAspectRatio="xMidYMid meet">
+				<path d="M 785.94 385 C 785.99 404.476 779.418 423.402 767.308 438.655 C 755.199 453.909 738.257 464.602 719.277 468.97 C 700.297 473.339 680.385 471.128 662.826 462.704 C 645.266 454.279 631.082 440.131 622.612 422.593 C 614.143 405.055 611.881 385.149 616.201 366.158 C 620.521 347.167 631.17 330.198 646.393 318.049 C 661.615 305.901 680.524 299.28 700 299.28 C 715.065 299.261 729.873 303.208 742.93 310.724 C 755.986 318.24 766.837 329.063 774.386 342.1 C 781.935 355.137 785.921 369.935 785.94 385 L 785.94 385"/>
+			</svg>
+		</div>
 	</div>
 	<nav id="cd-vertical-nav">
 		<ul>
@@ -61,13 +63,13 @@
 				</a>
 			</li>
 			<li>
-				<a class="nav-link" href="#section5" data-number="6">
+				<a class="nav-link" href="#section5" data-number="5">
 					<span class="cd-dot"></span>
-					<span class="cd-label">UX Design</span>
+					<span class="cd-label">UI/UX Design</span>
 				</a>
 			</li>
 			<li>
-				<a class="nav-link" href="#section6" data-number="7">
+				<a class="nav-link" href="#section6" data-number="6">
 					<span class="cd-dot"></span>
 					<span class="cd-label">Contact</span>
 				</a>
@@ -128,7 +130,6 @@
 <script src="js/scrollMonitor.js"></script>
 <script src='js/jquery.fancybox.min.js'></script>
 <script src='js/isotope.pkgd.min.js'></script>
-<script src="js/demo2.js"></script>
 <script src="js/main.js"></script>
 
 </body>

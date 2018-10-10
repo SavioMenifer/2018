@@ -81,10 +81,15 @@ a {
 }
 
 #posters-link:link, #posters-link:visited {
-  color: green;
+  color: #0267C1;
 }
-#posters-link:hover {
-  color: black;
+
+#logos-link:link, #logos-link:visited, #print-link:link, #print-link:visited {
+  color: #009688;;
+}
+
+#ux-link:link, #ux-link:visited {
+  color: #BA1309;
 }
 
 .contact-icons {
@@ -112,6 +117,13 @@ a {
   pointer-events: none;
 }
 
+.svg-wrap svg {
+  position: absolute;
+  width: 200%;
+  left: -25%;
+  bottom: 10%;
+}
+
 .morph {
   position: relative;
   height: 50%;
@@ -136,7 +148,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   
   41% { 
@@ -145,7 +156,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   100% {
     border-width: 1500px;
@@ -153,7 +163,6 @@ a {
     width: 2000px;
     margin-top: -2500px;
     margin-left:-2500px;
-    border-color: #009688;
   }
 }
 @keyframes RIPPLER {
@@ -164,7 +173,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   41% { 
     height: 0;
@@ -172,7 +180,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   100% {
     border-width: 1500px;
@@ -180,7 +187,6 @@ a {
     width: 2000px;
     margin-top: -2500px;
     margin-left:-2500px;
-    border-color: #009688;
   }
 }
 .ripple {
@@ -226,7 +232,6 @@ a {
     width: 2000px;
     margin-top: -2500px;
     margin-left:-2500px;
-    border-color: #009688;
   }
   40% { 
     height: 0;
@@ -234,7 +239,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   
   41% { 
@@ -243,7 +247,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   100% {
     height: 0;
@@ -258,7 +261,6 @@ a {
     width: 2000px;
     margin-top: -2500px;
     margin-left:-2500px;
-    border-color: #009688;
   }
   40% { 
     height: 0;
@@ -266,7 +268,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   41% { 
     height: 0;
@@ -274,7 +275,6 @@ a {
     border-width: 1500px;
     margin-top: -1500px;
     margin-left:-1500px; 
-    border-color: #009688;
   }
   100% {
     height: 0;
@@ -369,22 +369,22 @@ a {
   opacity: 1;
 }
 .no-touch #cd-vertical-nav a[data-number="1"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="1"]:hover .cd-dot{
-  background-color: #00FFD8;
+  background-color: #F37022;
 }
 .no-touch #cd-vertical-nav a[data-number="2"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="2"]:hover .cd-dot {
-  background-color: red;
+  background-color: #4EC3AD;
 }
 .no-touch #cd-vertical-nav a[data-number="3"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="3"]:hover .cd-dot {
-  background-color: blue;
+  background-color: #0267C1;
 }
 .no-touch #cd-vertical-nav a[data-number="4"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="4"]:hover .cd-dot {
-  background-color: green;
+  background-color: #009688;;
 }
 .no-touch #cd-vertical-nav a[data-number="5"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="5"]:hover .cd-dot {
-  background-color: orange;
+  background-color: #BA1309;
 }
 .no-touch #cd-vertical-nav a[data-number="6"].is-selected .cd-dot, .no-touch #cd-vertical-nav a[data-number="6"]:hover .cd-dot {
-  background-color: yellow;
+  background-color: #6064D1;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
