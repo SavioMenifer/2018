@@ -124,13 +124,6 @@ a {
   bottom: 10%;
 }
 
-.morph {
-  position: relative;
-  height: 50%;
-  fill: #282faf;
-  flex: none;
-}
-
 /* Ripple transition */
 .ripple-wrap {
   display: none;
@@ -546,6 +539,12 @@ a {
   .cd-section-text h1 {
     font-size: 5em;
     margin-bottom: 0.20em;
+  }
+
+  .svg-wrap svg {
+    width: 250%;
+    left: -50%;
+    bottom: 20%;
   }
 }
 
