@@ -2,7 +2,7 @@
 var mouseX, mouseY;
 
 // global variable for scroll position
-var tempScrollTop = 0;
+var tempScrollIndex = 0;
 
 var rippleColor = '#009688';
 
@@ -11,7 +11,6 @@ var Homepage = Barba.BaseView.extend({
 	namespace: 'home',
 	onEnter: function() {
 		if($.scrollify.isDisabled()) {
-			console.log('babe disabled');
 			$.scrollify.enable();
 		} else {
 			$.scrollify({
@@ -87,7 +86,7 @@ var Homepage = Barba.BaseView.extend({
 			mouseX = e.clientX;
 			mouseY = e.clientY;
 			rippleColor = $(this).css("color");
-			tempScrollTop = window.pageYOffset;
+			tempScrollIndex = $.scrollify.currentIndex();
 		});
 
 		//morphing js begins
@@ -624,6 +623,9 @@ var Homepage = Barba.BaseView.extend({
 			init();
 		};
 	},
+	onEnterCompleted: function() {
+		$.scrollify.instantMove(tempScrollIndex);
+	},
 	onLeave: function() {
 		$.scrollify.disable();
 	}
@@ -772,7 +774,6 @@ var ripple_wrap = $('.ripple-wrap'),
 
 		animFinish: function() {
 			$new_elem.css({visibility: 'visible', opacity: 1});
-			document.body.scrollTop = 0;
 			_this.done();	
 		}
 	}),
@@ -814,7 +815,7 @@ var ripple_wrap = $('.ripple-wrap'),
 		},
 
 		animFinish: function() {
-			setTimeout(function() {window.scrollTo(0, tempScrollTop);},1);
+			//setTimeout(function() {window.scrollTo(0, tempScrollTop);},1);
 			$new_elem.css({visibility: 'visible', opacity: 1});
 			_this.done();
 		}
