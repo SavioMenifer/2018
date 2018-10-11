@@ -624,6 +624,7 @@ var Homepage = Barba.BaseView.extend({
 		};
 	},
 	onEnterCompleted: function() {
+		$.scrollify.update();
 		$.scrollify.instantMove(tempScrollIndex);
 	},
 	onLeave: function() {
