@@ -10,6 +10,24 @@ var rippleColor = '#009688';
 var Homepage = Barba.BaseView.extend({
 	namespace: 'home',
 	onEnter: function() {
+		$.scrollify({
+			section : ".cd-section",
+			interstitialSection : "",
+			easing: "easeOutExpo",
+			scrollSpeed: 1100,
+			offset : 0,
+			scrollbars: true,
+			standardScrollElements: "",
+			setHeights: true,
+			overflowScroll: true,
+			updateHash: false,
+			touchScroll:true,
+			before:function() {},
+			after:function() {},
+			afterResize:function() {},
+			afterRender:function() {}
+		});
+
 		var contentSections = $('.cd-section'),
 			navigationItems = $('#cd-vertical-nav a');
 
