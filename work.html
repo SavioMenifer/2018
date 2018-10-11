@@ -10,12 +10,16 @@
 
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/work.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel='stylesheet' href='css/jquery.fancybox.min.css'>
 	<script src="js/modernizr.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
 </head>
 
-<body class="cd-work">
+<body>
+
+<div class="ripple-wrap"><div class="ripple"></div></div>
+<div class="reverse-ripple-wrap"><div class="reverse-ripple"></div></div>
 
 <div id="barba-wrapper"><div class="barba-container" data-namespace="work">
 
@@ -26,119 +30,269 @@
 			<div class="cd-dropdown">
 				<div class="dropdown-el">
 					<input type="radio" name="sortType" value="Relevance" data-hash="all" checked="checked"><label for="all" filter="*">All</label>
-					<input type="radio" name="sortType" value="Posters" data-hash="posters"><label for="posters" filter=".webTemplates">Posters</label>
+					<input type="radio" name="sortType" value="Posters" data-hash="posters"><label for="posters" filter=".posters">Posters</label>
 					<input type="radio" name="sortType" value="Logos" data-hash="logos"><label for="logos" filter=".logos">Logos</label>
-					<input type="radio" name="sortType" value="Print" data-hash="print"><label for="print" filter=".drawings">Print</label>
+					<input type="radio" name="sortType" value="Print" data-hash="print"><label for="print" filter=".print">Print</label>
 					<input type="radio" name="sortType" value="UX" data-hash="ux"><label for="ux" filter=".ui">UI/UX</label>
 				</div>
 			</div>
 			<div class="cd-filter">
 				<a class="current" data-filter="*" data-hash="all"">All</a>
-				<a data-filter=".webTemplates" data-hash="posters">Posters</a>
+				<a data-filter=".posters" data-hash="posters">Posters</a>
 				<a data-filter=".logos" data-hash="logos">Logos</a>
-				<a data-filter=".drawings" data-hash="print">Print</a>
+				<a data-filter=".print" data-hash="print">Print</a>
 				<a data-filter=".ui" data-hash="ux">UI/UX</a>
 			</div>
 		</header>
-		  <div class="wrapper">
-		    <div class="grid">
-		      <div class="grid-item logos">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-1.png" data-fancybox>
-		        	<img height="20" src="https://www.oxforduniversityimages.com/images/rotate/Image_Spring_17_1.gif" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-2.png" data-fancybox>
-		        	<img height="210" src="http://1.bp.blogspot.com/-hNC-oT6f-fY/TeXxO26yjvI/AAAAAAAAAOY/qfkOqdKkBi8/s1600/platon-photographer-putin-man-of-the-year-portrait.jpg" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-3.png" data-fancybox>
-		        	<img height="260" src="http://poiemaweb.com/assets/images/dribbble-3.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item webTemplates">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-4.png" data-fancybox>
-		        	<img height="120" src="http://poiemaweb.com/assets/images/dribbble-4.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item webTemplates">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-5.png" data-fancybox>
-		        	<img height="200" src="http://poiemaweb.com/assets/images/dribbble-5.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item ui">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-6.png" data-fancybox>
-		        	<img height="140" src="http://poiemaweb.com/assets/images/dribbble-6.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-7.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-7.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-8.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-8.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-9.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-9.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item logos">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-10.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-10.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item ui">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-11.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-11.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-12.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-12.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-13.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-13.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item logos">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-14.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-14.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-15.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-15.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-16.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-16.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item logos">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-17.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-17.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-18.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-18.png" alt="" />
-		        </a>
-		      </div>
-		      <div class="grid-item drawings">
-		        <a class="fancybox" href="http://poiemaweb.com/assets/images/dribbble-19.png" data-fancybox>
-		        	<img src="http://poiemaweb.com/assets/images/dribbble-19.png" alt="" />
-		        </a>
-		      </div>
-		    </div>
-		  </div>
+			<div class="wrapper">
+				<div class="grid">
+					<div class="grid-item posterss">
+						<a class="fancybox" href="images/large/poster-firebase_l.jpg" data-fancybox>
+							<img height="255" src="images/thumbs/poster-firebase_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-jwmartins_l.jpg" data-fancybox>
+							<img height="90" src="images/thumbs/logo-jwmartins_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-rocket_l.jpg" data-fancybox>
+							<img height="148" src="images/thumbs/logo-rocket_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-python_l.jpg" data-fancybox>
+							<img height="255" src="images/thumbs/poster-python_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-sav_l.jpg" data-fancybox>
+							<img height="129" src="images/thumbs/print-sav_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-kkb_l.jpg" data-fancybox>
+							<img height="131" src="images/thumbs/print-kkb_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-shaji_l.jpg" data-fancybox>
+							<img height="131" src="images/thumbs/print-shaji_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-coffee_l.jpg" data-fancybox>
+							<img height="131" src="images/thumbs/print-coffee_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-muffinmot_l.jpg" data-fancybox>
+							<img height="133" src="images/thumbs/poster-muffinmot_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-TIMETABLE_l.jpg" data-fancybox>
+							<img height="113" src="images/thumbs/print-TIMETABLE_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item ui">
+						<a class="fancybox" href="images/large/ui-whoosite_l.jpg" data-fancybox>
+							<img height="345" src="images/thumbs/ui-whoosite_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-kutch_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-kutch_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-final-poster_l.jpg" data-fancybox>
+							<img height="270" src="images/thumbs/poster-final-poster_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-entree_l.jpg" data-fancybox>
+							<img height="122" src="images/thumbs/poster-entree_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-kappa_l.jpg" data-fancybox>
+							<img height="180" src="images/thumbs/logo-kappa_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-hwflex_l.jpg" data-fancybox>
+							<img height="90" src="images/thumbs/poster-hwflex_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-happyimperial_l.jpg" data-fancybox>
+							<img height="134" src="images/thumbs/poster-happyimperial_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-madonna_l.jpg" data-fancybox>
+							<img height="236" src="images/thumbs/poster-madonna_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-radial_l.jpg" data-fancybox>
+							<img height="135" src="images/thumbs/poster-radial_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-whooflood_l.jpg" data-fancybox>
+							<img height="360" src="images/thumbs/poster-whooflood_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-india_l.jpg" data-fancybox>
+							<img height="255" src="images/thumbs/poster-india_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-Pakarpp_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-Pakarpp_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-elite_l.jpg" data-fancybox>
+							<img height="231" src="images/thumbs/print-elite_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item ui">
+						<a class="fancybox" href="images/large/ui-UIUX_l.jpg" data-fancybox>
+							<img height="101" src="images/thumbs/ui-UIUX_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-bands_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-bands_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-pidi_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-pidi_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-borb1_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-borb1_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-borb2_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-borb2_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-dance_l.jpg" data-fancybox>
+							<img height="230" src="images/thumbs/print-dance_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-contrast_l.jpg" data-fancybox>
+							<img height="94" src="images/thumbs/logo-contrast_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-shahul_l.jpg" data-fancybox>
+							<img height="90" src="images/thumbs/logo-shahul_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-zidra_l.jpg" data-fancybox>
+							<img height="108" src="images/thumbs/poster-zidra_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-seawire_l.jpg" data-fancybox>
+							<img height="127" src="images/thumbs/poster-seawire_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-gourmet_l.jpg" data-fancybox>
+							<img height="120" src="images/thumbs/poster-gourmet_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-lipa_l.jpg" data-fancybox>
+							<img height="79" src="images/thumbs/logo-lipa_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-link_l.jpg" data-fancybox>
+							<img height="144" src="images/thumbs/logo-link_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-eid_l.jpg" data-fancybox>
+							<img height="227" src="images/thumbs/poster-eid_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-choreo_l.jpg" data-fancybox>
+							<img height="265" src="images/thumbs/poster-choreo_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-taaq_l.jpg" data-fancybox>
+							<img height="253" src="images/thumbs/poster-taaq_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-biennale_l.jpg" data-fancybox>
+							<img height="231" src="images/thumbs/print-biennale_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-anime_l.jpg" data-fancybox>
+							<img height="129" src="images/thumbs/print-anime_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item ui">
+						<a class="fancybox" href="images/large/ui-playzone_l.jpg" data-fancybox>
+							<img height="225" src="images/thumbs/ui-playzone_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item print">
+						<a class="fancybox" href="images/large/print-whisper_l.jpg" data-fancybox>
+							<img height="231" src="images/thumbs/print-whisper_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-cult_l.jpg" data-fancybox>
+							<img height="233" src="images/thumbs/poster-cult_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-biryani_l.jpg" data-fancybox>
+							<img height="254" src="images/thumbs/poster-biryani_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-cakeworkshop_l.jpg" data-fancybox>
+							<img height="225" src="images/thumbs/poster-cakeworkshop_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item posters">
+						<a class="fancybox" href="images/large/poster-cariappa_l.jpg" data-fancybox>
+							<img height="135" src="images/thumbs/poster-cariappa_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item ui">
+						<a class="fancybox" href="images/large/ui-bravehearts_l.jpg" data-fancybox>
+							<img height="109" src="images/thumbs/ui-bravehearts_s.jpg" alt="" />
+						</a>
+					</div>
+					<div class="grid-item logos">
+						<a class="fancybox" href="images/large/logo-apex_l.jpg" data-fancybox>
+							<img height="112" src="images/thumbs/logo-apex_s.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
 

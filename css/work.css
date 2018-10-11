@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo');
 
+html {
+    background: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 26px 26px;
+  -moz-background-size: 26px 26px;
+  background-size: 26px 26px;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -159,6 +174,7 @@ header {
   margin: 0 auto;
   -webkit-perspective: 1000px;
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .grid-item {

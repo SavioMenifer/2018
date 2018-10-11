@@ -608,6 +608,9 @@ var Workpage = Barba.BaseView.extend({
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
 
+		// set barba to ignore fancybox links
+		$(".fancybox").addClass("no-barba");
+
 		// set navigation to current item from url and filter
 		function setNavigation() {
 			$(".dropdown-el input").each(function() {
@@ -690,26 +693,6 @@ var Workpage = Barba.BaseView.extend({
 
 Homepage.init();
 Workpage.init();
-
-/*
-// barba ignore rules
-Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck;
-Barba.Pjax.preventCheck = function(evt, element) {
-	if (!Barba.Pjax.originalPreventCheck(evt, element)) {
-		return false;
-	}
-
-	// additional (besides .no-barba) ignore links with these classes
-	var ignoreClasses = ['section-link', 'nav-link'];
-	for (var i = 0; i < ignoreClasses.length; i++) {
-		if (element.classList.contains(ignoreClasses[i])) {
-			return false;
-		}
-	}
-
-	return true;
-};
-*/
 
 // barba transition
 var ripple_wrap = $('.ripple-wrap'),
