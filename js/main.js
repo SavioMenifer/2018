@@ -10,23 +10,28 @@ var rippleColor = '#009688';
 var Homepage = Barba.BaseView.extend({
 	namespace: 'home',
 	onEnter: function() {
-		$.scrollify({
-			section : ".cd-section",
-			interstitialSection : "",
-			easing: "easeOutExpo",
-			scrollSpeed: 1100,
-			offset : 0,
-			scrollbars: true,
-			standardScrollElements: "",
-			setHeights: true,
-			overflowScroll: true,
-			updateHash: false,
-			touchScroll:true,
-			before:function() {},
-			after:function() {},
-			afterResize:function() {},
-			afterRender:function() {}
-		});
+		if($.scrollify.isDisabled()) {
+			console.log('babe disabled');
+			$.scrollify.enable();
+		} else {
+			$.scrollify({
+				section : ".cd-section",
+				interstitialSection : "",
+				easing: "easeOutExpo",
+				scrollSpeed: 1100,
+				offset : 0,
+				scrollbars: true,
+				standardScrollElements: "",
+				setHeights: true,
+				overflowScroll: true,
+				updateHash: false,
+				touchScroll:true,
+				before:function() {},
+				after:function() {},
+				afterResize:function() {},
+				afterRender:function() {}
+			});
+		}
 
 		var contentSections = $('.cd-section'),
 			navigationItems = $('#cd-vertical-nav a');
@@ -618,6 +623,9 @@ var Homepage = Barba.BaseView.extend({
 
 			init();
 		};
+	},
+	onLeave: function() {
+		$.scrollify.disable();
 	}
 });
 
@@ -706,6 +714,9 @@ var Workpage = Barba.BaseView.extend({
 				$('.dropdown-el').removeClass('expanded');
 			});
 		});
+	},
+	onEnterCompleted: function() {
+		window.scrollTo(0,0);
 	}
 });
 
