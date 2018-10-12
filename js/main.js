@@ -24,7 +24,7 @@ var Homepage = Barba.BaseView.extend({
 				setHeights: false,
 				overflowScroll: true,
 				updateHash: false,
-				touchScroll:true,
+				touchScroll:false,
 				before:function() {},
 				after:function() {},
 				afterResize:function() {},
