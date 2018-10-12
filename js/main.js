@@ -637,6 +637,8 @@ var Workpage = Barba.BaseView.extend({
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
 
+		$('body').css('overflow', 'hidden');
+
 		// set barba to ignore fancybox links
 		$(".fancybox").addClass("no-barba");
 
