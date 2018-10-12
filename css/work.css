@@ -165,7 +165,6 @@ header {
 
 /* grid css */
 .wrapper {
-  padding-top: 6rem;
   width:90%;
   height: 100vh;
   margin: 0 auto;
@@ -178,7 +177,7 @@ header {
 }
 
 .grid {
-  margin: 0 auto;
+  margin: 6rem auto;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   overflow: hidden;
