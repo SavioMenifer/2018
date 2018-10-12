@@ -10,6 +10,9 @@ var rippleColor = '#009688';
 var Homepage = Barba.BaseView.extend({
 	namespace: 'home',
 	onEnter: function() {
+		//disable barba on contact links
+		$("#section6 a").addClass("no-barba");
+
 		if($.scrollify.isDisabled()) {
 			$.scrollify.enable();
 		} else {
@@ -636,8 +639,6 @@ var Workpage = Barba.BaseView.extend({
 	namespace: 'work',
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
-
-		$('body').css('overflow', 'hidden');
 
 		// set barba to ignore fancybox links
 		$(".fancybox").addClass("no-barba");
