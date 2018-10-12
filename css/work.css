@@ -161,8 +161,10 @@ header {
 
 /* grid css */
 .wrapper {
-  width: 90%;
-  margin: 6rem auto;
+  padding-top: 6rem;
+  width:90%;
+  margin: 0 auto;
+  overflow: scroll;
   /*
   background: #fff;
   border-radius: 6px;
