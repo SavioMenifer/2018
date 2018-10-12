@@ -159,10 +159,15 @@ header {
   top: 0.9em;
 }
 
+.cd-work {
+  overflow: hidden;
+}
+
 /* grid css */
 .wrapper {
   padding-top: 6rem;
   width:90%;
+  height: 100vh;
   margin: 0 auto;
   overflow: scroll;
   /*
