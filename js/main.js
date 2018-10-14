@@ -13,26 +13,26 @@ var Homepage = Barba.BaseView.extend({
 		//disable barba on contact links
 		$("#section6 a").addClass("no-barba");
 
-		if($.scrollify.isDisabled()) {
-			$.scrollify.enable();
-		} else {
+		if (!($.scrollify.current())) { // if scrollify is not initialised
 			$.scrollify({
-				section : ".cd-section",
-				interstitialSection : "",
-				easing: "easeOutExpo",
-				scrollSpeed: 1100,
-				offset : 0,
-				scrollbars: true,
-				standardScrollElements: "",
-				setHeights: false,
-				overflowScroll: false,
-				updateHash: false,
-				touchScroll: true,
-				before:function() {},
-				after:function() {},
-				afterResize:function() {},
-				afterRender:function() {}
-			});
+			section : ".cd-section",
+			interstitialSection : "",
+			easing: "easeOutExpo",
+			scrollSpeed: 1100,
+			offset : 0,
+			scrollbars: true,
+			standardScrollElements: "",
+			setHeights: true,
+			overflowScroll: false,
+			updateHash: false,
+			touchScroll: true,
+			before:function() {},
+			after:function() {},
+			afterResize:function() {},
+			afterRender:function() {}
+		});
+		} else {
+			$.scrollify.enable();
 		}
 
 		var contentSections = $('.cd-section'),
@@ -549,6 +549,7 @@ var Homepage = Barba.BaseView.extend({
 					const watcher = scrollMonitor.create(scrollElemToWatch,-350);
 					
 					watcher.enterViewport(function() {
+						console.log(el.getAttribute('id') + " entered viewport with pos "+ pos);
 						step = pos;
 						anime.remove(shapeEl);
 						anime({
@@ -615,12 +616,12 @@ var Homepage = Barba.BaseView.extend({
 			};
 
 			const init = function() {
-					initShapeEl(0);
-					initShapeEl(1);
 					initShapeEl(2);
-					createScrollWatchers(0);
-					createScrollWatchers(1);
+					initShapeEl(1);
+					initShapeEl(0);
 					createScrollWatchers(2);
+					createScrollWatchers(1);
+					createScrollWatchers(0);
 			};
 
 			init();
@@ -628,7 +629,7 @@ var Homepage = Barba.BaseView.extend({
 	},
 	onEnterCompleted: function() {
 		$.scrollify.update();
-		$.scrollify.instantMove(tempScrollIndex);
+		$.scrollify.move(tempScrollIndex);
 	},
 	onLeave: function() {
 		$.scrollify.disable();
