@@ -101,22 +101,60 @@ a {
   color: #da160b;
 }
 
+.email-link:link, .email-link:visited {
+  color: #6064D1;
+}
+
 .contact-icons {
   margin-top: 0.55em;
 }
 
 .contact-icons img {
-  margin-right: 0.5em;
+  margin-right: 0.7em;
   max-height: 128px;
   min-height: 32px;
   height: 1.3em;
 }
 
+.chathead {
+  margin-bottom: 0.5em;
+}
+
 .display-image {
+  display: inline-block;
+  vertical-align: middle;
   border-radius: 50%;
   height: 2.6em;
   width: 2.6em;
-  margin-bottom: 0.5em;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  background: #000000;
+  border-radius: 5px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 16px;
+  color: #fcfcfc;
+  padding: 10px;
+  vertical-align: middle;
+  opacity: 0;
+  left: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-right-color: #000000;
+  border-width: 6px;
+  margin-top: -6px;
 }
 
 /* SVG Morph */
@@ -593,10 +631,13 @@ a {
     margin-bottom: 0.20em;
   }
 
+  .chathead {
+    margin-bottom: 1.5em;
+  }
+
   .display-image {
     height: 5.2em;
     width: 5.2em;
-    margin-bottom: 1.5em;
   }
 
   .svg-wrap svg {

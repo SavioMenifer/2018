@@ -15,25 +15,63 @@ var Homepage = Barba.BaseView.extend({
 
 		if (!($.scrollify.current())) { // if scrollify is not initialised
 			$.scrollify({
-			section : ".cd-section",
-			interstitialSection : "",
-			easing: "easeOutExpo",
-			scrollSpeed: 1100,
-			offset : 0,
-			scrollbars: true,
-			standardScrollElements: "",
-			setHeights: true,
-			overflowScroll: false,
-			updateHash: false,
-			touchScroll: true,
-			before:function() {},
-			after:function() {},
-			afterResize:function() {},
-			afterRender:function() {}
-		});
+				section : ".cd-section",
+				interstitialSection : "",
+				easing: "easeOutExpo",
+				scrollSpeed: 1100,
+				offset : 0,
+				scrollbars: true,
+				standardScrollElements: "",
+				setHeights: true,
+				overflowScroll: false,
+				updateHash: false,
+				touchScroll: true,
+				before:function() {},
+				after:function() {},
+				afterResize:function() {},
+				afterRender:function() {}
+			});
+			scrollMonitor.update();
 		} else {
 			$.scrollify.enable();
 		}
+
+		function hideTooltip(text) {
+			$('.tooltip').css('opacity', '0');
+			$('.tooltip').css('left', '0px');
+		}
+
+		function showTooltip(text) {
+			hideTooltip();
+			$('.tooltip').css('opacity', '1');
+			$('.tooltip').css('left', '20px');
+			$('.tooltip').text(text);
+		}
+
+		$('.display-image').on('click', function(event) {
+			var strings = [
+				'Ouch.',
+				'HEY!',
+				'Ow, my pixels!',
+				'No clicking!'
+			]
+			showTooltip(strings[Math.floor(Math.random()*strings.length)]);
+		});
+
+		$('.email-link').on('click', function(event) {
+			event.preventDefault();
+			var emailLink = document.querySelector('.email-link');  
+			var range = document.createRange();  
+			range.selectNode(emailLink);  
+			window.getSelection().addRange(range);  
+
+			try {   
+				if (document.execCommand('copy'))  
+					showTooltip("E-mail copied to clipboard!");
+			} catch(err) {  
+				showTooltip("Unable to copy e-mail :(");  
+			}  
+		});
 
 		var contentSections = $('.cd-section'),
 			navigationItems = $('#cd-vertical-nav a');
@@ -41,15 +79,11 @@ var Homepage = Barba.BaseView.extend({
 		updateNavigation();
 		$(window).on('scroll', function() {
 			updateNavigation();
+			hideTooltip();
 		});
 
 		//smooth scroll to the section
 		navigationItems.on('click', function(event) {
-			event.preventDefault();
-			smoothScroll($(this.hash));
-		});
-		//smooth scroll to second section
-		$('.cd-scroll-down').on('click', function(event) {
 			event.preventDefault();
 			smoothScroll($(this.hash));
 		});
@@ -696,6 +730,7 @@ var Workpage = Barba.BaseView.extend({
 			$('[data-fancybox]').fancybox({
 				buttons : ['close'],
 				infobar: false,
+				arrows: false,
 				hash: false,
 				autoFocus: false
 			});
