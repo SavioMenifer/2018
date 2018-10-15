@@ -202,7 +202,7 @@ var Homepage = Barba.BaseView.extend({
 						tx: 0,
 						ty: 100,
 						fill: {
-							color: '#E12C2C',
+							color: '#C84445',
 							duration: 500,
 							easing: 'linear'
 						},
@@ -342,7 +342,7 @@ var Homepage = Barba.BaseView.extend({
 						tx: 0,
 						ty: 100,
 						fill: {
-							color: '#E12C2C',
+							color: '#B03B3C',
 							duration: 500,
 							easing: 'linear'
 						},
@@ -482,18 +482,17 @@ var Homepage = Barba.BaseView.extend({
 						tx: 0,
 						ty: 100,
 						fill: {
-							color: '#EC0B43',
+							color: '#D64848',
 							duration: 500,
 							easing: 'linear'
 						},
 						animation: {
 							path: {
-								duration: 2000,
-								easing: 'easeOutElastic',
-								elasticity: 400
+								duration: 1500,
+								easing: 'easeOutQuad'
 							},
 							svg: {
-								duration: 2000,
+								duration: 1500,
 								easing: 'easeOutQuad'
 							}
 						}

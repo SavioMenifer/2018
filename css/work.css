@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo');
 
 html {
-    background: #f2f2f2;
+    background: #fcfcfc;
 }
 
 body {
@@ -64,8 +64,9 @@ header {
   margin: 1.8vw;
   font-size: 1.2em;
   font-family: 'Chivo', sans-serif;
+  cursor: pointer;
   text-decoration: none;
-  color: #f2f2f2;
+  color: #dddbdb;
   transition: 0.3s color ease-in-out;
 }
 
@@ -98,7 +99,7 @@ header {
   outline: none;
   border: .06em solid transparent;
   border-radius: 0.25em;
-  background-color: #f2f2f2;
+  background-color: #fcfcfc;
   transition: 0.3s all ease-in-out;
 }
 .dropdown-el input {
@@ -107,7 +108,7 @@ header {
 .dropdown-el label {
   font-size: 1.2em;
   font-family: 'Chivo', sans-serif;
-  border-top: .06em solid #f2f2f2;
+  border-top: .06em solid #fcfcfc;
   display: block;
   height: 2em;
   line-height: 2em; /*was 2*/
@@ -117,7 +118,7 @@ header {
 }
 .dropdown-el label:nth-child(2) {
   margin-top: 2em;
-  border-top: .06em solid #f2f2f2;
+  border-top: .06em solid #fcfcfc;
 }
 .dropdown-el input:checked + label {
   display: block;
@@ -169,6 +170,7 @@ header {
   height: 100vh;
   margin: 0 auto;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   /*
   background: #fff;
   border-radius: 6px;
@@ -186,7 +188,7 @@ header {
 .grid-item {
   width: 180px;
   height: auto;
-  background: #f2f2f2;
+  background: #d6d6d6;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -197,6 +199,10 @@ header {
 .fancybox img {
   max-width: 100%;
   display: block;
+}
+
+.fancybox-caption {
+  font-family: 'Chivo', sans-serif;
 }
 
 @media only screen and (max-width: 380px) {
