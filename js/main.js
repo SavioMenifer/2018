@@ -655,6 +655,8 @@ var Workpage = Barba.BaseView.extend({
 			$('.cd-filter .current').removeClass('current');
 			$('a[data-hash="' + hash + '"]').addClass('current');
 
+			$('.' + ((hash==='all')?'grid-item':hash) + ' a').attr('data-fancybox', hash + '-gallery');
+
 			var selector = $('label[for="' + hash + '"]').attr('filter');
 			$('.grid').isotope({
 				transitionDuration: 0,
@@ -669,18 +671,13 @@ var Workpage = Barba.BaseView.extend({
 			
 			$('input[data-hash="' + section + '"]').prop('checked', true);
 
+			$('.' + ((section==='all')?'grid-item':section) + ' a').attr('data-fancybox', section + '-gallery');
+
 			$('.grid').isotope({
 				transitionDuration: '0.5s',
 				filter: f
 			});
 		}
-
-		// Fancybox
-		$('[data-fancybox]').fancybox({
-			buttons : [ 
-				'close'
-			]
-		});
 
 		$(function() {
 			// Masonry Grid
@@ -693,6 +690,14 @@ var Workpage = Barba.BaseView.extend({
 					gutter: 10
 				}
 				// layoutMode: 'fitRows'
+			});
+
+			// Fancybox
+			$('[data-fancybox]').fancybox({
+				buttons : ['close'],
+				infobar: false,
+				hash: false,
+				autoFocus: false
 			});
 
 			if (hash) {
