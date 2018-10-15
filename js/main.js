@@ -548,7 +548,6 @@ var Homepage = Barba.BaseView.extend({
 					const watcher = scrollMonitor.create(scrollElemToWatch,-350);
 					
 					watcher.enterViewport(function() {
-						console.log(el.getAttribute('id') + " entered viewport with pos "+ pos);
 						step = pos;
 						anime.remove(shapeEl);
 						anime({
@@ -628,6 +627,7 @@ var Homepage = Barba.BaseView.extend({
 	},
 	onEnterCompleted: function() {
 		$.scrollify.update();
+		$.scrollify.instantMove(tempScrollIndex?tempScrollIndex-1:tempScrollIndex);
 		$.scrollify.move(tempScrollIndex);
 	},
 	onLeave: function() {
@@ -750,7 +750,7 @@ var ripple_wrap = $('.ripple-wrap'),
 					if (load_finished) {
 						el.style.WebkitAnimationPlayState = "running";
 						el.style.animationPlayState = "running";
-						setTimeout(_this.animFinish, 130); // wait for transition to finish
+						setTimeout(_this.animFinish, 200); // wait for transition to finish
 						return;
 					} else {
 						window.requestAnimationFrame(function() {monitor(el)});

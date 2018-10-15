@@ -101,13 +101,6 @@ a {
   color: #da160b;
 }
 
-.display-image {
-  border-radius: 50%;
-  height: 2.6em;
-  width: 2.6em;
-  margin-bottom: 0.5em;
-}
-
 .contact-icons {
   margin-top: 0.55em;
 }
@@ -117,6 +110,13 @@ a {
   max-height: 128px;
   min-height: 32px;
   height: 1.3em;
+}
+
+.display-image {
+  border-radius: 50%;
+  height: 2.6em;
+  width: 2.6em;
+  margin-bottom: 0.5em;
 }
 
 /* SVG Morph */
@@ -571,11 +571,12 @@ a {
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
 
+/*
 @media only screen and (min-width: 768px) {
   .touch .cd-nav-trigger, .touch #cd-vertical-nav {
     bottom: 40px;
   }
-}
+} */
 
 @media only screen and (max-width: 950px) {
   .cd-section-text p {
