@@ -168,6 +168,7 @@ header {
   margin: 0 auto;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
+  text-align: center;
   /*
   background: #fff;
   border-radius: 6px;
@@ -201,6 +202,16 @@ header {
 
 .fancybox-caption {
   font-family: 'Chivo', sans-serif;
+}
+
+#scrollup{
+  position: relative;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
+  color: gray;
+  bottom: 1em;
 }
 
 @media only screen and (max-width: 380px) {

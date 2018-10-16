@@ -33,6 +33,8 @@ var Homepage = Barba.BaseView.extend({
 				afterResize:function() {},
 				afterRender:function() {}
 			});
+			scrollMonitor.update();
+			$.scrollify.update();
 			scrollifyInitialised = 1;
 		} else {
 			$.scrollify.enable();
@@ -680,6 +682,18 @@ var Workpage = Barba.BaseView.extend({
 	namespace: 'work',
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
+
+		$('.wrapper').scroll(function(){
+            if ($(this).scrollTop() > 250) {
+                $('#scrollup').fadeIn(300);
+            } else {
+                $('#scrollup').fadeOut(300);
+            }
+        });
+		$('#scrollup').click(function(){
+            $(".wrapper").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
 
 		// set barba to ignore fancybox links
 		$(".fancybox").addClass("no-barba");
