@@ -4,6 +4,8 @@ var mouseX, mouseY;
 // global variable for scroll position
 var tempScrollIndex = 0;
 
+var scrollifyInitialised= 0;
+
 var rippleColor = '#009688';
 
 // setting up barba views
@@ -13,7 +15,7 @@ var Homepage = Barba.BaseView.extend({
 		//disable barba on contact links
 		$("#section6 a").addClass("no-barba");
 
-		if (!($.scrollify.current())) { // if scrollify is not initialised
+		if (!scrollifyInitialised) {
 			$.scrollify({
 				section : ".cd-section",
 				interstitialSection : "",
@@ -31,7 +33,7 @@ var Homepage = Barba.BaseView.extend({
 				afterResize:function() {},
 				afterRender:function() {}
 			});
-			scrollMonitor.update();
+			scrollifyInitialised = 1;
 		} else {
 			$.scrollify.enable();
 		}
@@ -43,15 +45,17 @@ var Homepage = Barba.BaseView.extend({
 
 		function showTooltip(text) {
 			hideTooltip();
-			$('.tooltip').css('opacity', '1');
-			$('.tooltip').css('left', '20px');
-			$('.tooltip').text(text);
+			setTimeout( function(){
+				$('.tooltip').css('opacity', '1');
+				$('.tooltip').css('left', '20px');
+				$('.tooltip').text(text);
+			}, 150);
 		}
 
 		$('.display-image').on('click', function(event) {
 			var strings = [
 				'Ouch.',
-				'HEY!',
+				'Naatil evideya?',
 				'Ow, my pixels!',
 				'No clicking!'
 			]
@@ -73,6 +77,10 @@ var Homepage = Barba.BaseView.extend({
 			}  
 		});
 
+		$('.resume-link').on('click', function(event) {
+			showTooltip("Download started!"); 
+		});
+
 		var contentSections = $('.cd-section'),
 			navigationItems = $('#cd-vertical-nav a');
 
@@ -85,7 +93,7 @@ var Homepage = Barba.BaseView.extend({
 		//smooth scroll to the section
 		navigationItems.on('click', function(event) {
 			event.preventDefault();
-			smoothScroll($(this.hash));
+			$.scrollify.move(($(this).attr('data-number'))-1);
 		});
 
 		//open-close navigation on touch devices
@@ -108,14 +116,6 @@ var Homepage = Barba.BaseView.extend({
 					navigationItems.eq(activeSection).removeClass('is-selected');
 				}
 			});
-		}
-
-		function smoothScroll(target) {
-			$('body,html').animate({
-					'scrollTop': target.offset().top
-				},
-				600
-			);
 		}
 
 		// saving mouse and scroll position when section link clicked
@@ -663,6 +663,13 @@ var Homepage = Barba.BaseView.extend({
 		$.scrollify.update();
 		$.scrollify.instantMove(tempScrollIndex?tempScrollIndex-1:tempScrollIndex);
 		$.scrollify.move(tempScrollIndex);
+
+		if ($.scrollify.currentIndex() != tempScrollIndex) //hacky fix for scrollify not moving after resize in work page
+			setTimeout( function(){
+				$.scrollify.instantMove(tempScrollIndex?tempScrollIndex-1:tempScrollIndex);
+				$.scrollify.move(tempScrollIndex);
+				console.log("myrr");
+			}, 400);
 	},
 	onLeave: function() {
 		$.scrollify.disable();
@@ -859,7 +866,6 @@ var ripple_wrap = $('.ripple-wrap'),
 		},
 
 		animFinish: function() {
-			//setTimeout(function() {window.scrollTo(0, tempScrollTop);},1);
 			$new_elem.css({visibility: 'visible', opacity: 1});
 			_this.done();
 		}

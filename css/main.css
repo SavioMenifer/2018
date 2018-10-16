@@ -101,19 +101,19 @@ a {
   color: #da160b;
 }
 
-.email-link:link, .email-link:visited {
+.email-link:link, .email-link:visited, .resume-link:link, .resume-link:visited {
   color: #6064D1;
 }
 
 .contact-icons {
-  margin-top: 0.55em;
+  margin-top: 0.7em;
 }
 
 .contact-icons img {
-  margin-right: 0.7em;
-  max-height: 128px;
+  margin-right: 0.4em;
+  max-height: 64px;
   min-height: 32px;
-  height: 1.3em;
+  height: 1em;
 }
 
 .chathead {
@@ -644,6 +644,10 @@ a {
     width: 250%;
     left: -50%;
     bottom: 20%;
+  }
+
+  .contact-icons {
+    margin-top: 1em;
   }
 }
 
