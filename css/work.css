@@ -168,7 +168,6 @@ header {
   margin: 0 auto;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  text-align: center;
   /*
   background: #fff;
   border-radius: 6px;
@@ -181,6 +180,7 @@ header {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   overflow: hidden;
+  text-align: center;
 }
 
 .grid-item {

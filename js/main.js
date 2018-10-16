@@ -683,7 +683,8 @@ var Workpage = Barba.BaseView.extend({
 	onEnter: function() {
 		var hash = window.location.hash.substring(1);
 
-		$('.wrapper').scroll(function(){
+		/*
+		$('.grid').scroll(function(){
             if ($(this).scrollTop() > 250) {
                 $('#scrollup').fadeIn(300);
             } else {
@@ -691,9 +692,10 @@ var Workpage = Barba.BaseView.extend({
             }
         });
 		$('#scrollup').click(function(){
-            $(".wrapper").animate({ scrollTop: 0 }, 500);
+            $(".grid").animate({ scrollTop: 0 }, 500);
             return false;
         });
+        */
 
 		// set barba to ignore fancybox links
 		$(".fancybox").addClass("no-barba");
