@@ -729,6 +729,7 @@ var Workpage = Barba.BaseView.extend({
 			$('input[data-hash="' + section + '"]').prop('checked', true);
 
 			$('.' + ((section==='all')?'grid-item':section) + ' a').attr('data-fancybox', section + '-gallery');
+			console.log('.' + ((section==='all')?'grid-item':section) + ' a');
 
 			$('.grid').isotope({
 				transitionDuration: '0.5s',
@@ -754,7 +755,6 @@ var Workpage = Barba.BaseView.extend({
 				buttons : ['close'],
 				infobar: false,
 				arrows: false,
-				hash: false,
 				autoFocus: false
 			});
 
