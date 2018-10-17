@@ -166,16 +166,15 @@ a {
   width: 100%;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
   pointer-events: none;
 }
 
 .svg-wrap svg {
   position: absolute;
-  width: 200%;
-  left: -25%;
-  bottom: 15%;
+  width: 140%;
+  height: 120%;
+  bottom: 10%;
+  right: -45%;
 }
 
 /* Ripple transition */
@@ -642,7 +641,7 @@ a {
 
   .svg-wrap svg {
     width: 250%;
-    left: -50%;
+    left: -55%;
     bottom: 20%;
   }
 
