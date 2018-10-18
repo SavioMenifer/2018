@@ -59,7 +59,7 @@ var Homepage = Barba.BaseView.extend({
 				'Ouch.',
 				'Naatil evideya?',
 				'Ow, my pixels!',
-				'No clicking!'
+				'No touching!'
 			]
 			showTooltip(strings[Math.floor(Math.random()*strings.length)]);
 		});
@@ -74,9 +74,13 @@ var Homepage = Barba.BaseView.extend({
 			try {   
 				if (document.execCommand('copy'))  
 					showTooltip("E-mail copied to clipboard!");
+				else
+					showTooltip("Unable to copy e-mail :("); 
 			} catch(err) {  
 				showTooltip("Unable to copy e-mail :(");  
-			}  
+			}
+
+			window.getSelection().removeAllRanges();
 		});
 
 		$('.resume-link').on('click', function(event) {
@@ -684,7 +688,8 @@ var Workpage = Barba.BaseView.extend({
 		var hash = window.location.hash.substring(1);
 
 		/*
-		$('.grid').scroll(function(){
+		$('#scrollup').fadeOut(0);
+		$('.wrapper').scroll(function(){
             if ($(this).scrollTop() > 250) {
                 $('#scrollup').fadeIn(300);
             } else {
@@ -692,10 +697,10 @@ var Workpage = Barba.BaseView.extend({
             }
         });
 		$('#scrollup').click(function(){
-            $(".grid").animate({ scrollTop: 0 }, 500);
+            $(".wrapper").animate({ scrollTop: 0 }, 500);
             return false;
         });
-        */
+		*/
 
 		// set barba to ignore fancybox links
 		$(".fancybox").addClass("no-barba");
