@@ -147,6 +147,8 @@ header {
   position: absolute;
   height: 100%;
   width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 0 auto;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
@@ -207,7 +209,10 @@ header {
 @media only screen and (max-width: 830px) {
   .wrapper {
     width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
   }
+
   .cd-dropdown {
     display: block;
   }
