@@ -102,7 +102,7 @@ a {
   color: #da160b;
 }
 
-.email-link:link, .email-link:visited, .resume-link:link, .resume-link:visited {
+.email-link:link, .email-link:visited, .resume-link:link, .resume-link:visited, .ext-link:link, .ext-link:visited {
   color: #6064D1;
 }
 
