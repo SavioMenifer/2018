@@ -62,7 +62,9 @@ var Homepage = Barba.BaseView.extend({
 				'No touching!',
 				'Blistering barnacles!',
 				'Are you still there?',
-				'Zzz'
+				'Zzz',
+				'Zimzalabim!',
+				'안녕하세요'
 			]
 			showTooltip(strings[Math.floor(Math.random()*strings.length)]);
 		});
