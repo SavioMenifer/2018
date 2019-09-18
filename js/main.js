@@ -64,7 +64,8 @@ var Homepage = Barba.BaseView.extend({
 				'Are you still there?',
 				'Zzz',
 				'Zimzalabim!',
-				'안녕하세요'
+				'안녕하세요',
+				'Hoe gaat het?'
 			]
 			showTooltip(strings[Math.floor(Math.random()*strings.length)]);
 		});
