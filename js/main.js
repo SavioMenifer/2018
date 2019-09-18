@@ -57,7 +57,7 @@ var Homepage = Barba.BaseView.extend({
 		$('.display-image').on('click', function(event) {
 			var strings = [
 				'Ouch.',
-				'Naatil evideya?',
+				'നാട്ടിൽ എവിടെയാ?',
 				'Ow, my pixels!',
 				'No touching!',
 				'Blistering barnacles!',
